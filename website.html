@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style >
+    
+        /* Add the default theme styles */
+        .body {
+          font-family: Arial, sans-serif;
+          background-color: white;
+          color: black;
+        }
+    
+        .header {
+          background-color: lightblue;
+          padding: 20px;
+        }
+    
+        h1 {
+          margin: 0;
+        }
+    
+        section {
+          margin: 20px;
+        }
+    
+        /* Add styles for the dark theme */
+        .dark-theme {
+          background-color: rgb(2, 0, 143);
+          color: rgb(0, 0, 0);
+        }
+    
+        .dark-theme header {
+          background-color: gray;
+        }
+    
+        /* Add styles for the light theme */
+        .light-theme {
+          background-color: rgb(182, 35, 35);
+          color: black;
+        }
+    
+        .light-theme header {
+          background-color: lightblue;
+        }
+      
+      </style>
+    
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width= , initial-scale=1.0" />
+    <title>TALKLINE</title>
+    <!---favicon linkage----->
+   <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+      <nav>
+            <div class="container">
+                <h2 class="logo">TALKLINE</h2>
+                <div class="search-bar">
+                    <i class="uil uil-search"></i>
+                    <input
+                    type="search"
+                    placeholder="Search for creators, inspirations and projects"
+                    />
+                </div>
+                <div class="create">
+                    <label class="btn btn-primary" for="create-post">Create</label>
+                    <div class="profile-pic">
+                        <img src="images/harshit story.jpg" alt="pic 1" />
+                    </div>
+                </div>
+            </div>
+      </nav>
+
+      <main>
+          <div class="container">
+              <div class="left">
+                  <a class="profile">
+                      <div class="profile-pic">
+                        <img src="./images/harshit story.jpg">
+                      </div>
+                      <div class="handle">
+                          <h4>Harshit</h4>
+                          <p class="text-muted">@Harshit</p>
+                      </div>
+                  </a>
+                  <div class="sidebar">
+                    <a class="menu-item active">
+                      <span><i class="uil uil-home"></i></span><form action = "index.html">
+                      <button>
+                        <h3>Home</h3>
+                      </button>
+                  </form> 
+                    </a>
+                    <a class="menu-item ">
+                      <span><i class="uil uil-compass"></i></span> 
+                      <form action = "explore.html">
+                        <button>
+                            <h3>Explore</h3>
+                        </button>
+                    </form>
+                    
+                    </a>
+                    <a class="menu-item" id="notifications">
+                      <span><i class="uil uil-bell"><small class="notification-count">9+</small></i></span>
+                      <form action = "notification.html">
+                        <button>
+                            <h3>Notifications</h3>
+                        </button>
+                    </form>
+                     
+                      
+                    </a>
+                    <a class="menu-item" id="messages-notifications">
+                        <i class="uil uil-envelope"><small class="notification-count">6</small></i></span><form action = "messagebutton.html">
+                            <button>
+                                <h3>Messages</h3>
+                                
+                            </button>
+                        </form>
+                        
+                    </a>
+        
+                    <a class="menu-item ">
+                      <span><i class="uil uil-analytics"></i></span> <form action = "anayltics.html">
+                        <button>
+                            <h3>Analytics</h3>
+                        </button>
+                    </form>
+                   
+                    </a>
+                    <a class="menu-item ">
+                      <span><i class="uil uil-palette"></i></span><h3>Theme</h3>
+                      <section>
+                        <!-- Add a button to toggle between the themes -->
+                        <button id="theme-toggle">Toggle Theme</button>
+                      </section>
+                    
+                      <script>
+                        // Get the button and the body element
+                        const button = document.getElementById("theme-toggle");
+                        const body = document.body;
+                    
+                        // Add a click event listener to the button
+                        button.addEventListener("click", function() {
+                          // Toggle the dark-theme class on the body element
+                          body.classList.toggle("dark-theme");
+                    
+                          // If the dark-theme class is present, change the button text to "Light Theme"
+                          if (body.classList.contains("dark-theme")) {
+                            button.innerHTML = "DARK ";
+                          } else {
+                            // Otherwise, change the button text to "Dark Theme"
+                            button.innerHTML = "LIGHT ";
+                          }
+                        });
+                      </script>
+                            
+                        
+                      
+                      
+                      
+                    </a>
+                  
+                    <a class="menu-item ">
+                      <span><i class="uil uil-setting"></i></span>
+                      <form action = "setting.html">
+                        <button>
+                            <h3>Settings</h3>
+                        </button>
+                    </form> 
+                    </a>
+
+                    <label class="btn btn-primary" for="create-post">Create Post</label>
+                </div>
+              </div>
+
+
+
+              <div class="middle">
+                <div class="stories">
+                    <div class="story">
+                        <div class="profile-pic">
+                            <img src="./images/harshit story.jpg" alt="">
+                        </div>
+                        <p class="name">Your Story</p>
+                    </div>
+                    <div class="story">
+                        <div class="profile-pic">
+                            <img src="./images/prakhardp.jpg" alt="">
+                        </div>
+                        <p class="name">Prakhar Sharma</p>
+                    </div>
+                    <div class="story">
+                        <div class="profile-pic">
+                            <img src="./images/flowers.jpg" alt="">
+                        </div>
+                        <p class="name">Shubam Singh</p>
+                    </div>
+                    <div class="story">
+                        <div class="profile-pic">
+                            <img src="./images/download.jpeg" alt="">
+                        </div>
+                        <p class="name">Laksaya Gaur</p>
+                    </div>
+                    <div class="story">
+                        <div class="profile-pic">
+                            <img src="./images/messiaman.jpeg" alt="">
+                        </div>
+                        <p class="name">Aman Yadav</p>
+                    </div>
+                    <div class="story">
+                        <div class="profile-pic">
+                            <img src="./images/akshant dp.jpeg" alt="">
+                        </div>
+                        <p class="name">Akshant </p>
+                    </div>
+                </div>
+
+                <form class="create-post">
+                    <div class="profile-pic">
+                        <img src="images/harshit story.jpg" alt="">
+                    </div>
+                    <input type="text" placeholder="What's on your mind harshit?" id="create-post">
+                    <input type="submit" value="Post" class="btn btn-primary">
+                </form>
+
+
+
+                <div class="feeds">
+                    <div class="feed">
+                        <div class="head">
+
+                        </div>
+                         <div class="user">
+                             <div class="profile-pic">
+                                 <img src="images/vitdp.png" alt="">
+                             </div>
+                             <div class="info">
+                                 <h3>VIT Bhopal</h3>
+                                 <small>Bhopal, 15 MINUTES AGO</small>
+                             </div >
+                             <SPAN class="edit"><i class="uil uil-ellipsis-h"></i></SPAN>
+                         </div>
+
+                         <div class="photo">
+                             <img src="images/vitfeed.jpg" alt="">
+                         </div>
+
+                         <div class="action-button">
+                             <div class="interaction-button">
+                                 <span><i class="uil uil-thumbs-up"></i></span>
+                                 <span><i class="uil uil-comment"></i></span>
+                                 <span><i class="uil uil-share"></i></span>
+                             </div>
+                             <div class="bookmark">
+                                 <span><i class="uil uil-bookmark"></i></span>
+                             </div>
+                         </div>
+
+                         <div class="liked-by">
+                             <span><img src="images/profile-15.jpg"></span>
+                             <span><img src="images/profile-16.jpg"></span>
+                             <span><img src="images/profile-17.jpg"></span>
+                             ,<p>Liked by <b>AKarsh</b>snd <b>220 others</b></p>
+                         </div>
+
+                         <div class="caption">
+                             <p><b>VIT Bhopal</b>vit academic block.
+                            <span class="hash-tag">#lifestyle</span></p>
+                         </div>
+                         <div class="comments text-muted">View all 130 comments</div>
+                    </div>
+                    <div class="feeds">
+                        <div class="feed">
+                            <div class="head">
+
+                            </div>
+                             <div class="user">
+                                 <div class="profile-pic">
+                                     <img src="images/profile-14.jpg" alt="">
+                                 </div>
+                                 <div class="info">
+                                     <h3>Santosh Sharma</h3>
+                                     <small>Dubai, 15 MINUTES AGO</small>
+                                 </div >
+                                 <SPAN class="edit"><i class="uil uil-ellipsis-h"></i></SPAN>
+                             </div>
+
+                             <div class="photo">
+                                 <img src="images/santosh.jpg" alt="">
+                             </div>
+
+                             <div class="action-button">
+                                 <div class="interaction-button">
+                                     <span><i class="uil uil-thumbs-up"></i></span>
+                                     <span><i class="uil uil-comment"></i></span>
+                                     <span><i class="uil uil-share"></i></span>
+                                 </div>
+                                 <div class="bookmark">
+                                     <span><i class="uil uil-bookmark"></i></span>
+                                 </div>
+                             </div>
+
+                             <div class="liked-by">
+                                 <span><img src="images/profile-15.jpg"></span>
+                                 <span><img src="images/profile-16.jpg"></span>
+                                 <span><img src="images/profile-17.jpg"></span>
+                                 ,<p>Liked by <b>AKarsh</b>snd <b>220 others</b></p>
+                             </div>
+
+                             <div class="caption">
+                                 <p><b>Santosh</b>.
+                                <span class="hash-tag">#lifestyle</span></p>
+                             </div>
+                             <div class="comments text-muted">View all 130 comments</div>
+                        </div>
+
+
+                    <div class="feed">
+                        <div class="head">
+
+                        </div>
+                         <div class="user">
+                             <div class="profile-pic">
+                                 <img src="images/Screenshot (55).png" alt="">
+                             </div>
+                             <div class="info">
+                                 <h3>satyam</h3>
+                                 <small>New York, 1 HOUR AGO</small>
+                             </div >
+                             <SPAN class="edit"><i class="uil uil-ellipsis-h"></i></SPAN>
+                         </div>
+
+                         <div class="photo">
+                             <img src="images/Screenshot (55).png" alt="">
+                         </div>
+
+                         <div class="action-button">
+                             <div class="interaction-button">
+                                 <span><i class="uil uil-thumbs-up"></i></span>
+                                 <span><i class="uil uil-comment"></i></span>
+                                 <span><i class="uil uil-share"></i></span>
+                             </div>
+                             <div class="bookmark">
+                                 <span><i class="uil uil-bookmark"></i></span>
+                             </div>
+                         </div>
+
+                         <div class="liked-by">
+                             <span><img src="images/profile-2.jpg"></span>
+                             <span><img src="images/profile-4.jpg"></span>
+                             <span><img src="images/profile-6.jpg"></span>
+                             ,<p>Liked by <b>AKarsh</b></b>snd <b>188 others</b></p>
+                         </div>
+
+                         <div class="caption">
+                             <p><b>Sytam </b>honesty in nature.
+                            <span class="hash-tag">#lifestyle</span></p>
+                         </div>
+                         <div class="comments text-muted">View all 40 comments</div>
+                    </div>
+
+                    <div class="feed">
+                        <div class="head">
+
+                        </div>
+                         <div class="user">
+                             <div class="profile-pic">
+                                 <img src="images/brijender dp.jpg" alt="">
+                             </div>
+                             <div class="info">
+                                 <h3>Brijender Pratap</h3>
+                                 <small>Amsterdam, 7 HOURS AGO</small>
+                             </div >
+                             <SPAN class="edit"><i class="uil uil-ellipsis-h"></i></SPAN>
+                         </div>
+
+                         <div class="photo">
+                             <img src="images/brijender profile.jpg" alt="">
+                         </div>
+
+                         <div class="action-button">
+                             <div class="interaction-button">
+                                 <span><i class="uil uil-thumbs-up"></i></span>
+                                 <span><i class="uil uil-comment"></i></span>
+                                 <span><i class="uil uil-share"></i></span>
+                             </div>
+                             <div class="bookmark">
+                                 <span><i class="uil uil-bookmark"></i></span>
+                             </div>
+                         </div>
+
+                         <div class="liked-by">
+                             <span><img src="images/profile-3.jpg"></span>
+                             <span><img src="images/profile-5.jpg"></span>
+                             <span><img src="images/profile-7.jpg"></span>
+                             ,<p>Liked by <b>you</b> and <b>130 others</b></p>
+                         </div>
+
+                         <div class="caption">
+                             <p><b>Brijender</b>.
+                            <span class="hash-tag">#lifestyle</span></p>
+                         </div>
+                         <div class="comments text-muted">View all 15 comments</div>
+                    </div>
+
+                    <div class="feed">
+                        <div class="head">
+
+                        </div>
+                         <div class="user">
+                             <div class="profile-pic">
+                                 <img src="images/cristiano.jpg" alt="">
+                             </div>
+                             <div class="info">
+                                 <h3>Akarsh singh</h3>
+                                 <small>USA, 3 HOURS AGO</small>
+                             </div >
+                             <SPAN class="edit"><i class="uil uil-ellipsis-h"></i></SPAN>
+                         </div>
+
+                         <div class="photo">
+                             <img src="images/cristiano.jpg" alt="">
+                         </div>
+
+                         <div class="action-button">
+                             <div class="interaction-button">
+                                 <span><i class="uil uil-thumbs-up"></i></span>
+                                 <span><i class="uil uil-comment"></i></span>
+                                 <span><i class="uil uil-share"></i></span>
+                             </div>
+                             <div class="bookmark">
+                                 <span><i class="uil uil-bookmark"></i></span>
+                             </div>
+                         </div>
+
+                         <div class="liked-by">
+                             <span><img src="images/profile-8.jpg"></span>
+                             <span><img src="images/profile-10.jpg"></span>
+                             <span><img src="images/profile-12.jpg"></span>
+                             ,<p>Liked by <b>Prakhar</b> and <b>280 others</b></p>
+                         </div>
+
+                         <div class="caption">
+                             <p><b>Akarsh</b>***.
+                            <span class="hash-tag">#lifestyle</span></p>
+                         </div>
+                         <div class="comments text-muted">View all 110 comments</div>
+                    </div>
+
+                    <div class="feed">
+                        <div class="head">
+
+                        </div>
+                         <div class="user">
+                             <div class="profile-pic">
+                                 <img src="images/flowers.jpg" alt="">
+                             </div>
+                             <div class="info">
+                                 <h3>Shubam singh</h3>
+                                 <small>Paris, 1 DAY AGO</small>
+                             </div >
+                             <SPAN class="edit"><i class="uil uil-ellipsis-h"></i></SPAN>
+                         </div>
+
+                         <div class="photo">
+                             <img src="images/flowers.jpg" alt="">
+                         </div>
+
+                         <div class="action-button">
+                             <div class="interaction-button">
+                                 <span><i class="uil uil-thumbs-up"></i></span>
+                                 <span><i class="uil uil-comment"></i></span>
+                                 <span><i class="uil uil-share"></i></span>
+                             </div>
+                             <div class="bookmark">
+                                 <span><i class="uil uil-bookmark"></i></span>
+                             </div>
+                         </div>
+
+                         <div class="liked-by">
+                             <span><img src="images/profile-9.jpg"></span>
+                             <span><img src="images/profile-11.jpg"></span>
+                             <span><img src="images/profile-13.jpg"></span>
+                             ,<p>Liked by <b>Akarsh </b>and <b>420 others</b></p>
+                         </div>
+
+                         <div class="caption">
+                             <p><b>Shubam </b>*****.
+                            <span class="hash-tag">#lifestyle</span></p>
+                         </div>
+                         <div class="comments text-muted">View all 120 comments</div>
+                    </div>
+
+                    <div class="feed">
+                        <div class="head">
+
+                        </div>
+                         <div class="user">
+                             <div class="profile-pic">
+                                 <img src="images/download.jpeg" alt="">
+                             </div>
+                             <div class="info">
+                                 <h3>Laksaya gaur </h3>
+                                 <small>Mumbai, 30 MINUTES AGO</small>
+                             </div >
+                             <SPAN class="edit"><i class="uil uil-ellipsis-h"></i></SPAN>
+                         </div>
+
+                         <div class="photo">
+                             <img src="images/download.jpeg" alt="">
+                         </div>
+
+                         <div class="action-button">
+                             <div class="interaction-button">
+                                 <span><i class="uil uil-thumbs-up"></i></span>
+                                 <span><i class="uil uil-comment"></i></span>
+                                 <span><i class="uil uil-share"></i></span>
+                             </div>
+                             <div class="bookmark">
+                                 <span><i class="uil uil-bookmark"></i></span>
+                             </div>
+                         </div>
+
+                         <div class="liked-by">
+                             <span><img src="images/profile-15.jpg"></span>
+                             <span><img src="images/profile-14.jpg"></span>
+                             <span><img src="images/profile-17.jpg"></span>
+                             ,<p>Liked by <b>Akarsh </b>snd <b>150 others</b></p>
+                         </div>
+
+                         <div class="caption">
+                             <p><b>Laksaya</b>============.
+                            <span class="hash-tag">#lifestyle</span></p>
+                         </div>
+                         <div class="comments text-muted">View all 30 comments</div>
+                    </div>
+
+                      
+                  
+                
+                    </div>
+
+              </div>
+
+
+
+              </div>
+          </div>
+      </main>
+
+        <script src="index.js"></script>
+  </body>
+
+</html>

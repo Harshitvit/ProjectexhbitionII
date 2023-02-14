@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title> setting</title>
+         <!---favicon linkage----->
+   <link rel="icon" href="favicon.ico">
+   <!---style.css linkage -->
+   <link rel="stylesheet" href="./styles.css" />
+        <style>
+            #settings {
+  width: 50%;
+  margin: 0 auto;
+  text-align: left;
+  padding: 20px;
+}
+
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+        </style>
+    </head>
+    <body>
+        <div id="settings">
+            <h2>Settings</h2>
+            <h2>      </h2>
+            <form>
+              <label for="username">Username:</label>
+              <input type="text" id="username" value="your_username">
+              <br>
+              <label for="email">Email:</label>
+              <input type="email" id="email" value="your_email">
+              <br>
+              <label for="password">Password:</label>
+              <input type="password" id="password" value="your_password">
+              <br>
+              <label for="notifications">Notifications:</label>
+              <input type="checkbox" id="notifications" checked>
+              <br><br>
+              <input type="submit" value="Save Changes">
+            </form>
+          </div>
+          <script>
+            document.querySelector('form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  let username = document.querySelector('#username').value;
+  let email = document.querySelector('#email').value;
+  let password = document.querySelector('#password').value;
+  let notifications = document.querySelector('#notifications').checked;
+  
+  // Save the changes to local storage or send data to the server
+  localStorage.setItem('username', username);
+  localStorage.setItem('email', email);
+  localStorage.setItem('password', password);
+  localStorage.setItem('notifications', notifications);
+});
+
+          </script>
+
+    </body>
+</html>
+
+
+  

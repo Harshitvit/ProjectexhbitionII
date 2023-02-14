@@ -1,0 +1,110 @@
+
+
+<html>
+  <head>
+    <title>Create User</title>
+    <link rel="icon" href="favicon.ico">
+   <!---style.css linkage -->
+        <link rel="stylesheet" href="./styles.css" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+.container {
+  width: 600px;
+  height: 400px;
+  background: #f2f2f2;
+  box-shadow: 0px 0px 10px #ccc;
+  border-radius: 10px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.header {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  color: #333;
+  padding: 50px 0;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.option {
+  width: 33.33%;
+  text-align: center;
+}
+
+.icon {
+  font-size: 48px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.text {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.number {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  color: #333;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="header">Talkline Analytics</div>
+        <div class="options">
+          <div class="option" id="option1">
+            <div class="icon">
+              <i class="fas fa-user-friends"></i>
+            </div>
+            <div class="text">Followers</div>
+            <div class="number" id="followers">100</div>
+          </div>
+          <div class="option" id="option2">
+            <div class="icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <div class="text">Likes</div>
+            <div class="number" id="likes">1100</div>
+          </div>
+          <div class="option" id="option3">
+            <div class="icon">
+              <i class="fas fa-eye"></i>
+            </div>
+            <div class="text">Views</div>
+            <div class="number" id="views">10000</div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        // Get the number elements
+const followers = document.getElementById('followers');
+const likes = document.getElementById('likes');
+const views = document.getElementById('views');
+
+// Animate the numbers
+let count = 0;
+const updateNumbers = () => {
+  followers.innerHTML = count;
+  likes.innerHTML = count + 10;
+  views.innerHTML = count + 100;
+  count
+
+      </script>
+      
+  </body>
+</html>
